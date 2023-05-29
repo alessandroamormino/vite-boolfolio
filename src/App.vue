@@ -1,4 +1,5 @@
 <script>
+import AppExplorer from './components/AppExplorer.vue';
 import AppMain from './components/AppMain.vue';
 import AppSide from './components/AppSide.vue';
 export default {
@@ -9,7 +10,8 @@ export default {
   }, 
   components: {
     AppMain,
-    AppSide
+    AppSide,
+    AppExplorer
 }
 }
 </script>
@@ -17,6 +19,7 @@ export default {
 <template>
   <div class="ui">
     <AppSide></AppSide>
+    <AppExplorer></AppExplorer>
     <AppMain></AppMain>
   </div>
 </template>
