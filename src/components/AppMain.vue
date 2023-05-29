@@ -1,19 +1,16 @@
 <script>
-import AppMain from './components/AppMain.vue';
 export default {
+  name: 'AppMain',
   data(){
     return{
-
+      text: 'Ciao',
     }
-  }, 
-  components: {
-    AppMain,
   }
 }
 </script>
 
 <template>
-  <AppMain></AppMain>
+  {{ text }}
 </template>
 
 <style lang="scss" scoped>
