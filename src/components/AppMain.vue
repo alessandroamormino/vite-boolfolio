@@ -1,6 +1,7 @@
 <script>
 // importo lo store
 import {store} from '../store.js';
+import HomePage from './HomePage.vue';
 
 import MainProjects from './Projects/MainProjects.vue';
 
@@ -11,11 +12,12 @@ export default{
           store,
         };
     },
-    components: { MainProjects }
+    components: { MainProjects, HomePage }
 }
 </script>
 <template>
   <main>
+    <HomePage v-if="this.store.activeLink == 0"></HomePage>
     <MainProjects v-if="this.store.activeLink == 2"></MainProjects>
   </main>
 </template>

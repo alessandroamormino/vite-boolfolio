@@ -1,5 +1,79 @@
 @import "bootstrap/scss/bootstrap";
 
+// Animation
+@keyframes btn1 {
+  from{
+    left: -200px;
+    opacity: 0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes btn2 {
+  from{
+    right: -200px;
+    opacity: 0;
+  }
+  to{
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes blinker-btn {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(.95);
+  }
+}
+
+@keyframes first {
+  from{
+    top: -200px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes second {
+  from{
+    left: 400px;
+    opacity: 0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes third {
+  from{
+    bottom: -200px;
+    opacity: 0;
+  }
+  to{
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 // Assets
 .ui{
   display: flex;
@@ -19,4 +93,7 @@ a{
     color: #fff;
   }
 } 	
+
+
+
 
