@@ -20,7 +20,7 @@ export default {
   methods: {
     // funzione che fa la chiamata axios
     getProjects(){
-      axios.get(this.store.URI).then(response => {
+      axios.get(this.store.URI+this.store.API).then(response => {
         console.log(response.data.results);
         this.store.projects = response.data.results;
       });

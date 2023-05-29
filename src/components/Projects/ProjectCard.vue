@@ -13,16 +13,20 @@ import {store} from '../../store.js';
     props: {
       project: Object,
     },
-    created(){
-      // console.log(this.store.projects);
+    computed: {
+      // letto l'immagine di copertina
+      thumb(){
+        return this.store.URI + 'storage/' + this.project.thumb;
+      }
     },  
+
   }
 </script>
 
 <template>
   
   <div class="card-projects">
-    <img src="" alt="... image">
+    <img :src="thumb" alt="{{ project.title }} image">
     <div class="content">
       <h1>{{project.title}}</h1>
       <h6>Type: </h6>
@@ -41,4 +45,53 @@ import {store} from '../../store.js';
 </template>
 
 <style lang="scss" scoped>
+.card-projects{
+  display: flex;
+  flex-flow: column nowrap;
+  // flex
+  width: 500px;
+  border-radius: 10px;
+  background-color: #1B1D2A;
+
+  overflow: hidden;
+
+  transition: all .2s ease;
+  &:hover{
+    // transform: scale(1.02);
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2)
+  }
+  img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .content{
+    padding: 1em;
+
+    h1{
+      font-size: 1.2em;
+    }
+    h6, p{
+      font-size: .8em;
+    }
+    .links{
+      display: flex;
+      gap: 2em;
+      margin-top: 1em;
+
+      font-size: .9em;
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+    .badge{
+      cursor: pointer;
+      transition: all .2s ease;
+      &:hover{
+        background-color: #5c5c5cbb;
+      }
+    }
+  }
+}
 </style>
