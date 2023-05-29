@@ -1,17 +1,22 @@
 <script>
+// importo lo store
+import {store} from '../store.js';
+
 import MainProjects from './Projects/MainProjects.vue';
 
 export default{
     name: "AppMain",
     data() {
-        return {};
+        return {
+          store,
+        };
     },
     components: { MainProjects }
 }
 </script>
 <template>
   <main>
-    <MainProjects></MainProjects>
+    <MainProjects v-if="this.store.activeLink == 2"></MainProjects>
   </main>
 </template>
 <style lang="scss" scoped>
