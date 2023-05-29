@@ -1,5 +1,6 @@
 <script>
 import AppMain from './components/AppMain.vue';
+import AppSide from './components/AppSide.vue';
 export default {
   data(){
     return{
@@ -8,12 +9,16 @@ export default {
   }, 
   components: {
     AppMain,
-  }
+    AppSide
+}
 }
 </script>
 
 <template>
-  <AppMain></AppMain>
+  <div class="ui">
+    <AppSide></AppSide>
+    <AppMain></AppMain>
+  </div>
 </template>
 
 <style lang="scss" scoped>
