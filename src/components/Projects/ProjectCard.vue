@@ -29,11 +29,11 @@ import {store} from '../../store.js';
     <img :src="thumb" alt="{{ project.title }} image">
     <div class="content">
       <h1>{{project.title}}</h1>
-      <h6>Type: </h6>
+      <h6>Type: {{ project.type ? project.type.name : 'none' }}</h6>
       <hr>
       <p>{{ project.content }}</p>
       <div class="d-flex mt-2"> 
-        <!-- <span class="badge rounded-pill mx-1" style="border: 1px solid {{$tech->color}}">{{$tech->name}}</span> -->
+        <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
       </div>
       <div class="links">
         <a href="#link-repo" target="_blank">Source Code</a>
