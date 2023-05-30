@@ -5,10 +5,10 @@ import {store} from '../store.js';
 import axios from 'axios';
 
 // importo i componenti
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
-  name: 'AppMain',
+  name: 'AppProjects',
   data(){
     return{
       store,

@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 // importo i componenti
 import HomePage from './pages/HomePage.vue';
+import AppProjects from './pages/AppProjects.vue';
 
 // setto la costante router per definire le rotte
 const router = createRouter({
@@ -13,6 +14,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomePage,
+    }, 
+    {
+      path: '/projects',
+      name: 'projects',
+      component: AppProjects,
     }
   ],
 });
