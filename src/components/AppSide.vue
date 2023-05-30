@@ -76,7 +76,7 @@ nav{
       }
     }
     // Active links in nav
-    ._active svg{
+    .router-link-active svg{
       fill: #fff;
     }
   }
