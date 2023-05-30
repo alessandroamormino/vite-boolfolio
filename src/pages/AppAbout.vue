@@ -164,7 +164,7 @@ p{
     }
   }
   .tech{
-    width: 120px;
+    width: 100px;
     transition: transform .3s ease;
     &:hover{
       transform: scale(1.08);
