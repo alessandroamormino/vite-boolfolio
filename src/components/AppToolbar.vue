@@ -33,13 +33,15 @@ export default{
   </div>
 </template>
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 .toolbar{
   display: flex;
   align-items: center;
   justify-content: center;
   // flex
   height: 25px;
-  background-color: #1B1E2B;
+  background-color: $toolbar-dark;
   color: #fff;
 
   font-size: .8em;

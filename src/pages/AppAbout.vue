@@ -133,6 +133,8 @@ export default {
   </div>
 </template>
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 p{
   margin: 3em 0;
 }
@@ -158,7 +160,7 @@ p{
     width: 50%;
     padding: 1em .5em;
     border-radius: 10px;
-    background-color: #1B1D2A;
+    background-color: $explorer-dark;
     &.big{
       margin: 1em auto;
     }

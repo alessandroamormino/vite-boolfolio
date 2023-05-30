@@ -45,13 +45,15 @@ import {store} from '../store.js';
 </template>
 
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 .card-projects{
   display: flex;
   flex-flow: column nowrap;
   // flex
   width: 500px;
   border-radius: 10px;
-  background-color: #1B1D2A;
+  background-color: $explorer-dark;
 
   overflow: hidden;
 

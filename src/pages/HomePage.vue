@@ -29,6 +29,8 @@ export default {
 </div>
 </template>
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 .homepage{
   h1.first{
     position: relative;
@@ -98,7 +100,7 @@ export default {
 
         width: .2rem;
         height: 1em;
-        background-color: #80CBC4;
+        background-color: $light-blue;
       }
     }
     .info{
@@ -110,14 +112,14 @@ export default {
         font-size: 1.2em;
         ._btn{
           padding: .4em 1em;
-          border: 1px solid #80CBC4;
+          border: 1px solid $light-blue;
         }
         ._btn-primary{
           position: relative;
           opacity: 0;
           animation: btn1 .7s ease forwards 1s, blinker-btn .8s infinite alternate-reverse;
           // animation
-          background-color: #80CBC4;
+          background-color: $light-blue;
           margin-right: 1em;
           transition: transform .4s ease;
           &:hover{
@@ -129,11 +131,11 @@ export default {
           opacity: 0;
           animation: btn2 .7s ease forwards 1s;
           // animation
-          background-color: #2A2D3E;
+          background-color: $main-dark;
           color: #fff;
           transition: background-color .4s ease;
           &:hover{
-            background-color: #80CBC4;
+            background-color: $light-blue;
             color: #000;
           }
         }

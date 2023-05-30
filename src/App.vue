@@ -19,7 +19,7 @@ export default {
 
 <template>
   <AppToolbar></AppToolbar>
-  <div class="ui">
+  <div class="ui dark-mode">
     <AppSide></AppSide>
     <AppExplorer></AppExplorer>
     <main>

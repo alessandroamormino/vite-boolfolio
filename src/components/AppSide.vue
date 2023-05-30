@@ -41,6 +41,8 @@ export default{
 </nav>
 </template>
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 nav{
   aside{
     display: flex;
@@ -49,7 +51,7 @@ nav{
     // flex
     width: 60px;
     height: calc(100vh - 25px);
-    background-color: #1B1E2B;
+    background-color: $nav-dark;
     .top, .bottom{
       display: flex;
       flex-flow: column;
@@ -58,7 +60,7 @@ nav{
     .icon-container{
       padding: 1em;
       &._active{
-        border-left: 2px solid #80CBC4;
+        border-left: 2px solid $light-blue;
       }
       .side-icon{
         display: block;

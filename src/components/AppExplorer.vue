@@ -41,6 +41,8 @@ export default{
 </div>
 </template>
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 .explorer{
   display: block;
   // display
@@ -50,7 +52,7 @@ export default{
   padding: 1em;
   width: 200px;
   color: #fff;
-  background-color: #1A1D2A;
+  background-color: $explorer-dark;
 
   font-size: .9em;
   .drop{
