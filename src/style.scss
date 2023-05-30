@@ -76,6 +76,12 @@
   }
 }
 
+footer.light-mode{
+  .footer-content{
+    background-color: $toolbar-light;
+  }
+}
+
 // **************************************************
 //                      ANIMATIONS
 // **************************************************
