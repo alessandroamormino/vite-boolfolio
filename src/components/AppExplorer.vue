@@ -48,7 +48,6 @@ export default{
   z-index: 1;
   // position
   padding: 1em;
-  // width: 10vw;
   width: 200px;
   color: #fff;
   background-color: #1A1D2A;

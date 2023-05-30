@@ -1,6 +1,7 @@
 <script>
 import AppExplorer from './components/AppExplorer.vue';
 import AppSide from './components/AppSide.vue';
+import AppToolbar from './components/AppToolbar.vue';
 
 export default {
   data(){
@@ -10,12 +11,14 @@ export default {
   }, 
   components: {
     AppSide,
-    AppExplorer
+    AppExplorer,
+    AppToolbar
 }
 }
 </script>
 
 <template>
+  <AppToolbar></AppToolbar>
   <div class="ui">
     <AppSide></AppSide>
     <AppExplorer></AppExplorer>
