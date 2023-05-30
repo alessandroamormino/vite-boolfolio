@@ -90,4 +90,31 @@ export default{
     }
   }
 }
+
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .toolbar{
+    font-size: .7em;
+    .left{
+      img{
+        height: 15px;
+      }
+      .functions{
+        display: none;
+      }
+    }
+    .center{
+      flex: none;
+    }
+    
+    .right{
+      div{
+        height: 10px;
+      }
+    }
+  }
+}
 </style>
