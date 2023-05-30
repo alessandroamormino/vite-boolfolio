@@ -1,5 +1,6 @@
 <script>
 import AppExplorer from './components/AppExplorer.vue';
+import AppFooter from './components/AppFooter.vue';
 import AppSide from './components/AppSide.vue';
 import AppToolbar from './components/AppToolbar.vue';
 
@@ -15,7 +16,8 @@ export default {
   components: {
     AppSide,
     AppExplorer,
-    AppToolbar
+    AppToolbar,
+    AppFooter
 }
 }
 </script>
@@ -29,6 +31,7 @@ export default {
       <router-view></router-view>
     </main>
   </div>
+  <AppFooter></AppFooter>
 </template>
 
 <style lang="scss" scoped>
@@ -49,4 +52,4 @@ main{
       width: calc(100% - 60px);
   }
 }
-</style>
+</style>http://localhost:5173/#
