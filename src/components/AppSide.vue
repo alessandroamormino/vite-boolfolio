@@ -81,4 +81,22 @@ nav{
     }
   }
 }
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+nav{
+  aside{
+    width: 50px;
+    .icon-container{
+      padding: .5em;
+      .side-icon{
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+}
 </style>
