@@ -53,7 +53,7 @@ export default {
 
 <template>
     <div v-if="this.store.projects.length > 0">
-      <h1>Stuff i've build so far</h1>
+      <h1>Stuff i've built so far</h1>
         <div class="cards">
           <ProjectCard v-for="project in this.store.projects" :project="project"></ProjectCard>
         </div>
