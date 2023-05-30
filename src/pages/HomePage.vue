@@ -172,7 +172,7 @@ export default {
     .container-centered{
       flex-flow: column nowrap;
       gap: .2em;
-      width: calc(100% - 60px - 3em);
+      width: calc(100% - 50px - 3em);
       .svg-image{
         svg{
           display: none;
