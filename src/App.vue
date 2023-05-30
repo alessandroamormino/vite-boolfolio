@@ -20,7 +20,7 @@ export default {
   <div class="ui">
     <AppSide></AppSide>
     <AppExplorer></AppExplorer>
-    <AppMain></AppMain>
+    <router-view></router-view>
   </div>
 </template>
 

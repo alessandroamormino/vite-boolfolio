@@ -1,9 +1,9 @@
 <script>
 // importo lo store
 import {store} from '../store.js';
-import HomePage from './HomePage.vue';
+// import HomePage from './HomePage.vue';
 
-import MainProjects from './MainProjects.vue';
+// import MainProjects from './MainProjects.vue';
 
 export default{
     name: "AppMain",
@@ -12,13 +12,13 @@ export default{
           store,
         };
     },
-    components: { MainProjects, HomePage }
+    // components: { MainProjects, HomePage }
 }
 </script>
 <template>
   <main>
-    <HomePage v-if="this.store.activeLink == 0"></HomePage>
-    <MainProjects v-if="this.store.activeLink == 2"></MainProjects>
+    <!-- <HomePage v-if="this.store.activeLink == 0"></HomePage>
+    <MainProjects v-if="this.store.activeLink == 2"></MainProjects> -->
   </main>
 </template>
 <style lang="scss" scoped>
