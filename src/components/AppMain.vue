@@ -3,7 +3,7 @@
 import {store} from '../store.js';
 import HomePage from './HomePage.vue';
 
-import MainProjects from './Projects/MainProjects.vue';
+import MainProjects from './MainProjects.vue';
 
 export default{
     name: "AppMain",

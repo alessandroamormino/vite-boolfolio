@@ -1,6 +1,6 @@
 <script>
 // importo lo store
-import {store} from '../../store.js';
+import {store} from '../store.js';
 // importo axios
 import axios from 'axios';
 
