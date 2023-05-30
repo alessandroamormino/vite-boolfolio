@@ -5,6 +5,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import AppProjects from './pages/AppProjects.vue';
 import AppAbout from './pages/AppAbout.vue';
+import AppGithub from './pages/AppGithub.vue';
 
 // setto la costante router per definire le rotte
 const router = createRouter({
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AppAbout,
+    },
+    {
+      path: '/github',
+      name: 'github',
+      component: AppGithub,
     },
   ],
 });

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'AppAbout',
+  name: 'AppGithub',
   data(){
     return{
 
@@ -9,7 +9,7 @@ export default {
 }
 </script>
 <template>
-  <h1>Pagina About</h1>
+  <h1>Pagina Github</h1>
 </template>
 <style lang="scss" scoped>
 </style>
