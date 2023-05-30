@@ -3,8 +3,83 @@
 
 @import "bootstrap/scss/bootstrap";
 
+// **************************************************
+//                      THEMES
+// **************************************************
+.ui.light-mode{
+  background-color: $main-light;
+  & *{
+    color: #000;
+  }
+  nav{
+    aside{
+      background-color: $nav-light;
+      .icon-container:hover{
+        background-color: $beige;
+      }
+      .router-link-active svg{
+        fill: $beige;
+      }
+    }
+  }
+  .explorer{
+    background-color: $explorer-light;
+  }
+  .homepage{
+    .container-centered{
+      h3{
+        span::after{
+          background-color: $beige;
+        }
+      }
+      .info{
+        .buttons{
+          ._btn{
+            border: 1px solid $beige;
+          }
+          ._btn-primary{
+            background-color: $beige;
+          }
+          ._btn-secondary{
+            background-color: $nav-light;
+            color: #000;
+            &:hover{
+              background-color: $beige;
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    .technologies{
+      .column{
+        background-color: $explorer-light;
+      }
+    }
+    .card-projects{
+      background-color: $explorer-light;
+      .content{
+        .badge{
+          &:hover{
+            background-color: #d7cb90bb;
+          }
+        }
+      }
+    }
+  }
+}
+.toolbar.light-mode{
+  .toolbar-content{
+    background-color: $toolbar-light;
+    color: #000;
+  }
+}
 
-// Animation
+// **************************************************
+//                      ANIMATIONS
+// **************************************************
+
 @keyframes btn1 {
   from{
     left: -200px;
@@ -77,13 +152,14 @@
     opacity: 1;
   }
 }
-
-// Assets
+// **************************************************
+//                      ASSETS
+// **************************************************
 .ui{
   display: flex;
-  background-color: $main-dark;
   width: 100vw;
   height: calc(100dvh - 25px);
+  background-color: $main-dark;
 }
 
 body{

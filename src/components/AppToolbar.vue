@@ -1,41 +1,46 @@
 <script>
+// importo lo store
+import {store} from '../store.js';
+
 export default{
   name: 'AppToolbar',
   data(){
     return {
-
-    }
-  }
+      store,
+    } 
+  }, 
 }
 </script>
 <template>
-  <div class="toolbar">
-    <div class="left">
-      <img src="/img/vscode_icon.svg" alt="">
-      <div class="functions">
-        <span>File</span>
-        <span>Edit</span>
-        <span>Selection</span>
-        <span>View</span>
-        <span>Go</span>
-        <span>Run</span>
-        <span>Terminal</span>
+  <div class="toolbar" :class="this.store.darkMode ? 'dark-mode' : 'light-mode'">
+    <div class="toolbar-content">
+      <div class="left">
+        <img src="/img/vscode_icon.svg" alt="">
+        <div class="functions">
+          <span>File</span>
+          <span>Edit</span>
+          <span>Selection</span>
+          <span>View</span>
+          <span>Go</span>
+          <span>Run</span>
+          <span>Terminal</span>
+        </div>
       </div>
-    </div>
-    <div class="center">
-      <span>Amormino Alessandro - Portfolio</span>
-    </div>
-    <div class="right">
-      <div class="close"></div>
-      <div class="minimize"></div>
-      <div class="expand"></div>
+      <div class="center">
+        <span>Amormino Alessandro - Portfolio</span>
+      </div>
+      <div class="right">
+        <div class="close"></div>
+        <div class="minimize"></div>
+        <div class="expand"></div>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
 // import variable.scss
 @use '../scss/variables.scss' as *;
-.toolbar{
+.toolbar-content{
   display: flex;
   align-items: center;
   justify-content: center;

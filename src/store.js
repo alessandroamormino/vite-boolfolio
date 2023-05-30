@@ -9,4 +9,7 @@ export const store = reactive({
   // memorizzo la risposta della chiamata
   projects: '',
 
+  // theme
+  darkMode: true,
+
 });
