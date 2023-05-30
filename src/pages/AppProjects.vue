@@ -64,9 +64,9 @@ export default {
       </div>
     </div>
     <div class="button-section">
-      <button @click="prevPage()" class="btn btn-secondary">Next Page</button>
+      <button @click="prevPage()" class="btn btn-secondary">&lt;</button>
       <span>{{ this.currentPage }} / {{ this.lastPage }}</span>
-      <button @click="nextPage()" class="btn btn-secondary">Next Page</button>
+      <button @click="nextPage()" class="btn btn-secondary">></button>
     </div>
 </template>
 

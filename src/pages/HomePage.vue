@@ -146,4 +146,39 @@ export default {
     }
   }
 }
+
+
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .homepage{
+    font-size: .7em;
+    height: 100%;
+    .svg-image-box{
+      #small1{
+        top: -200px;
+        left: 0;
+      }
+      #small2{
+        top: -150px;
+        left: 80px;
+      }
+      #small3{
+        display: none;
+      }
+    }
+    .container-centered{
+      flex-flow: column nowrap;
+      gap: .2em;
+      width: calc(100% - 60px - 3em);
+      .svg-image{
+        svg{
+          display: none;
+        }
+      }
+    }
+  }
+}
 </style>

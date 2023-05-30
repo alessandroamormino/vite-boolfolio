@@ -78,4 +78,14 @@ export default{
     height: 1.2em;
   }
 }
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+    // Explorer:
+  .explorer{
+    display: none;
+  }
+}
 </style>

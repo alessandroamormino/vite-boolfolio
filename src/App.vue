@@ -34,4 +34,13 @@ main{
   padding: 2em;
   overflow: auto;
 }
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  main{
+      width: calc(100% - 60px);
+  }
+}
 </style>

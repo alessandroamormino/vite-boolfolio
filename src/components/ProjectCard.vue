@@ -32,7 +32,7 @@ import {store} from '../store.js';
       <h6>Type: {{ project.type ? project.type.name : 'none' }}</h6>
       <hr>
       <p>{{ project.content }}</p>
-      <div class="d-flex mt-2"> 
+      <div class="d-flex mt-2 flex-wrap gap-1"> 
         <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
       </div>
       <div class="links">
@@ -94,4 +94,6 @@ import {store} from '../store.js';
     }
   }
 }
+
+
 </style>
