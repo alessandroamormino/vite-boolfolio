@@ -1,20 +1,10 @@
 <script>
-// importo lo store
-import {store} from '../store.js';
-
-
 export default{
   name: 'AppExplorer',
   data(){
     return {
-      store,
     }
   }, 
-  methods: {
-    setActiveLink(index){
-      this.store.activeLink = index;
-    }
-  }
 }
 </script>
 <template>
@@ -28,23 +18,23 @@ export default{
     <div class="files">
       <div class="home flex">
         <img src="/img/html_icon.svg" alt="" class="explorer-img">
-        <a @click="setActiveLink(0)" href="#">home.html</a>
+        <router-link :to="{name:'home'}">home.html</router-link>
       </div>
       <div class="about flex">
         <img src="/img/css_icon.svg" alt="" class="explorer-img">
-        <a @click="setActiveLink(1)" href="#">about.css</a>
+        <router-link :to="{name:'about'}">about.css</router-link>
       </div>
       <div class="projects flex">
         <img src="/img/js_icon.svg" alt="" class="explorer-img">
-        <a @click="setActiveLink(2)" href="#">projects.js</a>
+        <router-link :to="{name:'projects'}">projects.js</router-link>
       </div>
       <div class="github flex">
         <img src="/img/markdown_icon.svg" alt="" class="explorer-img">
-        <a @click="setActiveLink(3)" href="#">github.md</a>
+        <router-link :to="{name:'github'}">github.md</router-link>
       </div>
       <div class="contact flex">
         <img src="/img/json_icon.svg" alt="" class="explorer-img">
-        <a @click="setActiveLink(4)" href="#">contact.json</a>
+        <router-link :to="{name:'contact'}">contact.json</router-link>
       </div>
     </div>
   </div>
