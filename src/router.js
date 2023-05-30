@@ -7,6 +7,7 @@ import AppProjects from './pages/AppProjects.vue';
 import AppAbout from './pages/AppAbout.vue';
 import AppGithub from './pages/AppGithub.vue';
 import AppContact from './pages/AppContact.vue';
+import ProjectDetails from './pages/ProjectDetails.vue';
 
 // setto la costante router per definire le rotte
 const router = createRouter({
@@ -37,6 +38,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: AppContact,
+    },
+    {
+      path: '/project/:slug',
+      name: 'project-detail',
+      component: ProjectDetails,
     },
   ],
 });

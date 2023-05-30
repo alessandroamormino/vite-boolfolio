@@ -9,7 +9,4 @@ export const store = reactive({
   // memorizzo la risposta della chiamata
   projects: '',
 
-  // Gestisco lo spostamento delle pagine con un activeLink
-  activeLink: 0,
-
 });
