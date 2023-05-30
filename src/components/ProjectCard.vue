@@ -37,7 +37,7 @@ import {store} from '../store.js';
       </div>
       <div class="links">
         <a href="#link-repo" target="_blank">Source Code</a>
-        <a href="#link-website" target="_blank">Website</a>
+        <a v-if="project.website != null" href="#link-website" target="_blank">Website</a>
       </div>
     </div>
   </div>
