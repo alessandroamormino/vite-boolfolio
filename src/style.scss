@@ -55,6 +55,9 @@
     .technologies{
       .column{
         background-color: $explorer-light;
+        h5{
+          color: $beige;
+        }
       }
       .tech{
         i{
