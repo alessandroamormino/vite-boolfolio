@@ -76,7 +76,9 @@ export default {
       <hr>
       <div class="technologies">
         <h5>Technologies:</h5>
-        <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
+        <div>
+          <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
+        </div>
       </div>
       <hr>
       <div class="links">
@@ -133,6 +135,15 @@ export default {
     a:hover{
       text-decoration: underline;
     }
+  }
+}
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .technologies{
+    flex-flow: row wrap;
   }
 }
 </style>
