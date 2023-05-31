@@ -224,4 +224,34 @@ p{
     }
   }
 }
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  p {
+    font-size: .8em;
+  }
+  .technologies{
+    font-size: .8em;
+    .columns{
+      flex-flow: column nowrap;
+    }
+  .column{
+      .tech{  
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        i{
+          font-size: 32px;
+        }
+      }
+      .column-inner{
+        justify-content: center;
+      }
+    }
+
+
+  }
+}
 </style>
