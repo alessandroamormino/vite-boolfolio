@@ -58,10 +58,13 @@ import {store} from '../store.js';
 
   overflow: hidden;
 
+  filter: opacity(.4);
+
   transition: all .2s ease;
   &:hover{
     // transform: scale(1.02);
-    box-shadow: 10px 10px 10px rgba(0,0,0,.2)
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+    filter: opacity(1);
   }
   img{
     width: 100%;
