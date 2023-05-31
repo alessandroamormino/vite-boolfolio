@@ -6,72 +6,86 @@ export default {
       backEnd: [
         {
           name: 'PHP',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+          icon: 'devicon-php-plain',
         },
         {
           name: 'MySql',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg',
+          icon: 'devicon-mysql-plain',
         },
         {
           name: 'Laravel',
-          path: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg'
+          path: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg',
+          icon: 'devicon-laravel-plain',
         },
         {
           name: 'Git',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+          icon: 'devicon-git-plain',
         },
       ],
       frontEnd: [
         {
           name: 'HTML',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+          icon: 'devicon-html5-plain',
         },
         {
           name: 'CSS',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
-        },
-        {
-          name: 'Sass',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+          icon: 'devicon-css3-plain',
         },
         {
           name: 'JS',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
-        },
-        {
-          name: 'Vue',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'
-        },
-        {
-          name: 'Vite',
-          path: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+          icon: 'devicon-javascript-plain',
         },
         {
           name: 'Bootstrap',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+          icon: 'devicon-bootstrap-plain',
         },
+        {
+          name: 'Sass',
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+          icon: 'devicon-sass-original',
+        },
+        {
+          name: 'Vue',
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+          icon: 'devicon-vuejs-plain',
+        },
+        // {
+        //   name: 'Vite',
+        //   path: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg'
+        // },
       ], 
       programs: [
         {
           name: 'GitHub',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+          icon: 'devicon-github-original',
         },
         {
           name: 'VSCode',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'
-        },
-        {
-          name: 'Figma',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+          icon: 'devicon-vscode-plain',
         },
         {
           name: 'MacOS',
-          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg'
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg',
+          icon: 'devicon-apple-original',
         },
         {
-          name: 'Postman',
-          path: 'https://www.svgrepo.com/show/354202/postman-icon.svg'
+          name: 'Figma',
+          path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+          icon: 'devicon-figma-plain',
         },
+        // {
+        //   name: 'Postman',
+        //   path: 'https://www.svgrepo.com/show/354202/postman-icon.svg'
+        // },
       ]
     }
   }
@@ -103,33 +117,45 @@ export default {
   <h3>Things i use:</h3>
   <hr>
   <div class="technologies">
-    <div class="titles">
+    <!-- <div class="titles">
       <h5>Front-End</h5>
       <h5>Back-End</h5>
-    </div>
+    </div> -->
     <div class="columns">
       <div class="column">
-        <div v-for="image in this.frontEnd" class="tech front">
-          <img :src="image.path" alt="{{image.name}}"> 
-          <div class="name">{{image.name}}</div>
+        <h5>Front-End</h5>
+        <div class="column-inner">
+          <div v-for="image in this.frontEnd" class="tech front">
+            <!-- <img :src="image.path" alt="{{image.name}}">  -->
+            <i :class="image.icon"></i>
+            <div class="name">{{image.name}}</div>
+          </div>
         </div>
       </div>
       <div class="column">
-        <div v-for="image in this.backEnd" class="tech back">
-          <img :src="image.path" alt="{{image.name}}"> 
-          <div class="name">{{image.name}}</div>
+        <h5>Back-End</h5>
+        <div class="column-inner">
+          <div v-for="image in this.backEnd" class="tech back">
+            <!-- <img :src="image.path" alt="{{image.name}}">  -->
+            <i :class="image.icon"></i>
+            <div class="name">{{image.name}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h5>Programs</h5>
+        <div class="column-inner">
+          <div v-for="image in this.programs" class="tech programs">
+            <!-- <img :src="image.path" alt="{{image.name}}">  -->
+            <i :class="image.icon"></i>
+            <div class="name">{{image.name}}</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="titles">
+    <!-- <div class="titles">
       <h5>Programs</h5>
-    </div>
-    <div class="column big">
-      <div v-for="image in this.programs" class="tech programs">
-        <img :src="image.path" alt="{{image.name}}"> 
-        <div class="name">{{image.name}}</div>
-      </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <style lang="scss" scoped>
@@ -149,24 +175,43 @@ p{
   .columns{
     display: flex;
     gap: 2em;
+    // justify-content: center;
   }
   .column{
     display: flex;
-    // flex-flow: column wrap;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+    // flex-flow: row wrap;
+    // justify-content: center;
+    align-items: center;
     gap: 1em;
     // flex
-    width: 50%;
-    padding: 1em .5em;
-    border-radius: 10px;
+    // width: 50%;
+    // width: 200px;
+    padding: 1.5em;
+    border-radius: 50px;
     background-color: $explorer-dark;
-    &.big{
-      margin: 1em auto;
+    // border: 1px solid $light-blue;
+    // &.big{
+    //   margin: 1em auto;
+    // }
+    // &:first-of-type{
+    //   width: 300px;
+    //   text-align: center;
+    //   .column-inner{
+    //     justify-content: space-between;
+    //   }
+    // }
+    .column-inner{
+      display: flex;
+      flex-flow: row wrap;
+      gap: 1em;
     }
   }
   .tech{
-    width: 100px;
+    i{
+      font-size: 64px;
+    }
+    // width: 100px;
     transition: transform .3s ease;
     &:hover{
       transform: scale(1.08);
