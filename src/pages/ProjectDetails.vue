@@ -56,16 +56,35 @@ export default {
   </div>
   <div v-else class="details">
     <h1>Project: {{ project.title }}</h1>
+    <hr>
     <div v-if="projectFound">
       <!-- esiste un progetto dalla chiamata axios -->
       <div class="image">
         <img :src="thumb" :alt="project.title">
       </div>
+      
+      <div class="type">
+        <h5>Type: <em>{{ project.type ? project.type.name : 'No Type'}}</em></h5>
+      </div>
+      <hr>
       <div class="content">
-        <h4>Description:</h4>          
+        <h5>Description:</h5>          
         <p>
           {{ project.content }}
         </p>
+      </div>
+      <hr>
+      <div class="technologies">
+        <h5>Technologies:</h5>
+        <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
+      </div>
+      <hr>
+      <div class="links">
+        <h5>Links: </h5>
+        <div class="d-flex gap-4">
+          <a href="#link-repo" target="_blank">Source Code</a>
+          <a v-if="project.website != null" href="#link-website" target="_blank">Website</a>
+        </div>
       </div>
     </div>
     <div v-else>
@@ -85,12 +104,38 @@ export default {
   height: 100%;
 }
 .details{
+  font-size: .9em;
   .image {
     margin: 2em 0;
     img{
       width: 100%;
       border-radius: 5px;
     }
+  }
+  .type{
+    em{
+      font-size: .8em;
+    }
+  }
+  .technologies{
+    display: flex;
+    align-items: baseline;
+    gap: .5em;
+    .badge{
+      cursor: pointer;
+      transition: all .2s ease;
+      &:hover{
+        background-color: #5c5c5cbb;
+      }
+    }
+  }
+  .links{
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+  hr{
+    margin-bottom: 2em;
   }
 }
 </style>
