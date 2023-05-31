@@ -60,4 +60,15 @@ export default {
     }
   }
 }
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .footer-content{
+    height: 25px;
+    font-size: .7em;
+    padding: 0 20px;
+  }
+}
 </style>
