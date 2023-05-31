@@ -45,20 +45,24 @@ export default {
 
       });
     }, 
-    nextPage(){
-      if(this.currentPage == this.lastPage){
-        this.currentPage = 1;
-      } else {
-        this.currentPage++;
-      }
-      this.getProjects();
-    }, 
-    prevPage(){
-      if(this.currentPage == 1){
-        this.currentPage = this.lastPage;
-      } else {
-        this.currentPage--;
-      }
+    // nextPage(){
+    //   if(this.currentPage == this.lastPage){
+    //     this.currentPage = 1;
+    //   } else {
+    //     this.currentPage++;
+    //   }
+    //   this.getProjects();
+    // }, 
+    // prevPage(){
+    //   if(this.currentPage == 1){
+    //     this.currentPage = this.lastPage;
+    //   } else {
+    //     this.currentPage--;
+    //   }
+    //   this.getProjects();
+    // }, 
+    updatePage(index){
+      this.currentPage = index + 1;
       this.getProjects();
     }
   }, 
@@ -86,9 +90,10 @@ export default {
             <ProjectCard v-for="project in this.store.projects" :project="project"></ProjectCard>
           </div>
           <div class="button-section">
-            <button @click="prevPage()" class="btn btn-secondary">&lt;</button>
-            <span>{{ this.currentPage }} / {{ this.lastPage }}</span>
-            <button @click="nextPage()" class="btn btn-secondary">></button>
+            <!-- <button @click="prevPage()" class="btn btn-secondary">&lt;</button> -->
+            <!-- <span>{{ this.currentPage }} / {{ this.lastPage }}</span> -->
+            <div @click="updatePage(index)" v-for="(pages, index) in lastPage" class="bullet" :class="(index + 1)==currentPage ? 'active' : ''"></div>
+            <!-- <button @click="nextPage()" class="btn btn-secondary">></button> -->
           </div>
         </div>
         <div v-else>
@@ -97,8 +102,10 @@ export default {
           </div>
         </div>
       </div>
-      <div v-else class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div v-else class="loading-screen">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
     </div>
     <div v-else class="loading-screen">
@@ -109,6 +116,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// import variable.scss
+@use '../scss/variables.scss' as *;
 .cards{
   display: flex;
   flex-flow: row wrap;
@@ -133,6 +142,16 @@ export default {
   // flex
   button, a{
     font-size: 1em;
+  }
+  .bullet{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid $light-blue;
+    cursor: pointer;
+    &.active{
+      background-color: $light-blue;
+    }
   }
 }
 .alert{
