@@ -23,7 +23,7 @@ export default {
     // funzione che fa la chiamata axios
     getProjects(){
       axios.get(this.store.URI+this.store.API + '?page=' + this.currentPage).then(response => {
-        console.log(response.data.results);
+        // console.log(response);
         this.store.projects = response.data.results.data;
         this.lastPage = response.data.results.last_page;
       });

@@ -134,8 +134,5 @@ export default {
       text-decoration: underline;
     }
   }
-  hr{
-    margin-bottom: 2em;
-  }
 }
 </style>
