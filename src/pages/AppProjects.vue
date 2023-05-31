@@ -14,6 +14,10 @@ export default {
       store,
       currentPage: 1,
       lastPage: '',
+      selectedTypeId: '',
+      isLoading: true,
+      projectsFound: false,
+      types: [],
     }
   }, 
   components: {
@@ -22,10 +26,23 @@ export default {
   methods: {
     // funzione che fa la chiamata axios
     getProjects(){
-      axios.get(this.store.URI+this.store.API + '?page=' + this.currentPage).then(response => {
+      axios.get(this.store.URI+this.store.API + '?page=' + this.currentPage + '&type_id=' + this.selectedTypeId).then(response => {
         // console.log(response);
-        this.store.projects = response.data.results.data;
-        this.lastPage = response.data.results.last_page;
+
+        // stoppo il caricamento
+        this.isLoading = false;
+
+        // controllo se la chiamata è avvenuta con successo
+        if(response.data.success){
+          this.store.projects = response.data.results.data;
+          this.lastPage = response.data.results.last_page;
+          this.types = response.data.allTypes;
+          this.projectsFound = true;
+        } else {
+          this.projectsFound = false;
+        }
+
+
       });
     }, 
     nextPage(){
@@ -54,19 +71,38 @@ export default {
 <template>
     <div v-if="this.store.projects.length > 0">
       <h1>Stuff i've built so far</h1>
-        <div class="cards">
-          <ProjectCard v-for="project in this.store.projects" :project="project"></ProjectCard>
+      <!-- creo una select per filtrare la tipologia del progetto -->
+      <form @submit.prevent="" action="" class="d-flex">
+        <select name="type_id" id="type_id" class="form-select" v-model="selectedTypeId" @change="getProjects()">
+          <option value="">Tutte</option>
+          <option v-for="singleType in types" :value="singleType.id">{{ singleType.name }}</option>
+        </select>
+      </form>
+      <div v-if="!isLoading">
+        <div v-if="projectsFound">
+          <div class="cards">
+            <ProjectCard v-for="project in this.store.projects" :project="project"></ProjectCard>
+          </div>
+          <div class="button-section">
+            <button @click="prevPage()" class="btn btn-secondary">&lt;</button>
+            <span>{{ this.currentPage }} / {{ this.lastPage }}</span>
+            <button @click="nextPage()" class="btn btn-secondary">></button>
+          </div>
         </div>
+        <div v-else>
+          <div class="alert alert-warning" role="alert">
+            No project found
+          </div>
+        </div>
+      </div>
+      <div v-else class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
     <div v-else class="loading-screen">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
-    </div>
-    <div class="button-section">
-      <button @click="prevPage()" class="btn btn-secondary">&lt;</button>
-      <span>{{ this.currentPage }} / {{ this.lastPage }}</span>
-      <button @click="nextPage()" class="btn btn-secondary">></button>
     </div>
 </template>
 
@@ -96,6 +132,9 @@ export default {
   button, a{
     font-size: 1em;
   }
+}
+.alert{
+  margin-top: 2em;
 }
 
 
