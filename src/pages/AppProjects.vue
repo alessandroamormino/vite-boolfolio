@@ -76,7 +76,7 @@ export default {
       <form @submit.prevent="" action="" class="d-flex gap-3">
         <span>Search for Type:</span>
         <select name="type_id" id="type_id" v-model="selectedTypeId" @change="getProjects()">
-          <option value="">Tutte</option>
+          <option value="">All</option>
           <option v-for="singleType in types" :value="singleType.id">{{ singleType.name }}</option>
         </select>
       </form>
