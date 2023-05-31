@@ -154,7 +154,7 @@ export default {
       }
     }
     .svg-image{
-      padding-right:200px;
+      padding-right:150px;
       svg{
         width: 600px;
       }
