@@ -39,6 +39,7 @@ const router = createRouter({
       name: 'contact',
       component: AppContact,
     },
+    // rotta che gestisce il singolo progetto
     {
       path: '/project/:slug',
       name: 'project-detail',

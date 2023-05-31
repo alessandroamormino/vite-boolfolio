@@ -38,6 +38,7 @@ import {store} from '../store.js';
       <div class="links">
         <a href="#link-repo" target="_blank">Source Code</a>
         <a v-if="project.website != null" href="#link-website" target="_blank">Website</a>
+        <router-link :to="{name: 'project-detail', params: {slug: project.slug}}">Details</router-link>
       </div>
     </div>
   </div>
