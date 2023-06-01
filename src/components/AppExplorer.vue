@@ -3,8 +3,14 @@ export default{
   name: 'AppExplorer',
   data(){
     return {
+      isVisible: true,
     }
   }, 
+  methods: {
+    dropdown(){
+      this.isVisible = !this.isVisible;
+    }
+  },
 }
 </script>
 <template>
@@ -12,10 +18,10 @@ export default{
   <h6>EXPLORER</h6>
   <div>
     <div class="drop">
-      <i class="fa-solid fa-angle-down"></i>
+      <i @click="dropdown()" class="fa-solid fa-angle-down" :class="this.isVisible ? '' : 'hidden'"></i>
       <span>Portfolio</span>
     </div>
-    <div class="files">
+    <div v-if="this.isVisible" class="files">
       <div class="home flex">
         <img src="/img/html_icon.svg" alt="" class="explorer-img">
         <router-link :to="{name:'home'}">home.html</router-link>
@@ -56,7 +62,12 @@ export default{
     align-items: center;
     gap: .5em;
     i{
+      cursor: pointer;
       font-size: .8em;
+      transition: all .4s ease;
+      &.hidden{
+        transform: rotate(-90deg);
+      }
     }
   }
   .files{
