@@ -13,18 +13,12 @@ export default {
 </script>
 <template>
 <div class="homepage">
-  <!-- <div class="svg-image-box">
-    <svg id="small1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    <defs>                         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            <stop id="stop1" :stop-color="this.store.darkMode ? 'rgba(128, 203, 196, 1)' : '#AC9D58'" offset="0%"></stop>                            <stop id="stop2" :stop-color="this.store.darkMode ? 'rgba(42, 45, 62, 1)' : '#EEE8D5'" offset="100%"></stop>                        </linearGradient>                    </defs>                <path fill="url(#sw-gradient)" d="M22,5C22,15.8,11,31.6,-1.1,31.6C-13.1,31.6,-26.2,15.8,-26.2,5C-26.2,-5.7,-13.1,-11.4,-1.1,-11.4C11,-11.4,22,-5.7,22,5Z" width="100%" height="100%" transform="translate(50 50)" style="transition: all 0.3s ease 0s;" stroke-width="0"></path>              </svg>
-    <svg id="small2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    <defs>                         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            <stop id="stop1" :stop-color="this.store.darkMode ? 'rgba(128, 203, 196, 1)' : '#AC9D58'" offset="0%"></stop>                            <stop id="stop2" :stop-color="this.store.darkMode ? 'rgba(42, 45, 62, 1)' : '#EEE8D5'" offset="100%"></stop>                        </linearGradient>                    </defs>                <path fill="url(#sw-gradient)" d="M22,5C22,15.8,11,31.6,-1.1,31.6C-13.1,31.6,-26.2,15.8,-26.2,5C-26.2,-5.7,-13.1,-11.4,-1.1,-11.4C11,-11.4,22,-5.7,22,5Z" width="100%" height="100%" transform="translate(50 50)" style="transition: all 0.3s ease 0s;" stroke-width="0"></path>              </svg>
-    <svg id="small3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    <defs>                         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            <stop id="stop1" :stop-color="this.store.darkMode ? 'rgba(128, 203, 196, 1)' : '#AC9D58'" offset="0%"></stop>                            <stop id="stop2" :stop-color="this.store.darkMode ? 'rgba(42, 45, 62, 1)' : '#EEE8D5'" offset="100%"></stop>                        </linearGradient>                    </defs>                <path fill="url(#sw-gradient)" d="M22,5C22,15.8,11,31.6,-1.1,31.6C-13.1,31.6,-26.2,15.8,-26.2,5C-26.2,-5.7,-13.1,-11.4,-1.1,-11.4C11,-11.4,22,-5.7,22,5Z" width="100%" height="100%" transform="translate(50 50)" style="transition: all 0.3s ease 0s;" stroke-width="0"></path>              </svg>
-  </div> -->
   <div class="container-centered">
     <div class="info">
       <h1 class="first">Hi,</h1> <h1 class="second">I'm Alessandro Amormino</h1>
       <h3 class="third">Full Stack Web <span>Developer</span></h3>
       <div class="buttons">
         <router-link :to="{name: 'projects'}"><button class="_btn _btn-primary">View works</button></router-link>
-        <!-- <button class="_btn _btn-secondary">Contact me</button> -->
         <a :href="'mailto:' + this.store.email + '?subject=Contact request'" class="_btn _btn-secondary">Contact me</a>
       </div>
     </div>
@@ -39,10 +33,6 @@ export default {
 <style lang="scss" scoped>
 // import variable.scss
 @use '../scss/variables.scss' as *;
-// *{
-//   color: #80cbc4;
-//   color: rgba(42, 45, 62, 1)
-// }
 .homepage{
   h1.first{
     position: relative;
@@ -58,29 +48,6 @@ export default {
     position: relative;
     opacity: 0;
     animation: third .7s ease forwards .6s;
-  }
-  .svg-image-box{
-    position: absolute;
-    top: 200px;
-    right: 300px;
-    svg#small1{
-      position: absolute;
-      top: 100px;
-      right: 50px;
-      width: 100px;
-    }
-    svg#small2{
-      position: absolute;
-      top: 180px;
-      right: 90px;
-      width: 100px;
-    }
-    svg#small3{
-      position: absolute;
-      top: 90px;
-      right: 150px;
-      width: 100px;
-    }
   }
   .container-centered{
     width: calc(100% - 60px - 2em - 200px);

@@ -50,6 +50,9 @@ export default{
 @use '../scss/variables.scss' as *;
 nav{
   aside{
+    position: relative;
+    z-index: 1;
+    // position
     display: flex;
     flex-flow: column;
     justify-content: space-between;
