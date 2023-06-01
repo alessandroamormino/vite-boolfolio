@@ -4,18 +4,22 @@ export default{
   data(){
     return {
       isVisible: true,
+      isClose: false,
     }
   }, 
   methods: {
     dropdown(){
       this.isVisible = !this.isVisible;
+    }, 
+    closeExplorer(){
+      this.isClose = !this.isClose;
     }
   },
 }
 </script>
 <template>
-<div class="explorer">
-  <h6>EXPLORER</h6>
+<div class="explorer" :class="this.isClose ? 'close' : ''">
+  <h6 v-if="!this.isClose">EXPLORER</h6>
   <div>
     <div class="drop">
       <i @click="dropdown()" class="fa-solid fa-angle-down" :class="this.isVisible ? '' : 'hidden'"></i>
@@ -40,12 +44,15 @@ export default{
       </div>
     </div>
   </div>
+  <i @click="closeExplorer()" id="closer" class="fa-solid fa-angle-left" :class="this.isClose ? 'rotate' : ''"></i>
 </div>
 </template>
 <style lang="scss" scoped>
 // import variable.scss
 @use '../scss/variables.scss' as *;
 .explorer{
+  position: relative;
+  // position
   display: block;
   // display
   position: relative;
@@ -61,6 +68,7 @@ export default{
     display: flex;
     align-items: center;
     gap: .5em;
+    transition: all 1.5s ease-in-out;
     i{
       cursor: pointer;
       font-size: .8em;
@@ -72,12 +80,42 @@ export default{
   }
   .files{
     padding: .5em;
+    transition: all 1.5s ease-in-out;
     .flex{
       display: flex;
       align-items: center;
       gap: .5em;
     }
   }
+
+  transition: all .5s ease-in-out;
+  &.close{
+    width: 0;
+    .drop{
+      position: absolute;
+      left: -10000px;
+      opacity: 0;
+    }
+    .files{
+      position: absolute;
+      left: -10000px;
+      opacity: 0;
+    }
+  }
+
+  #closer{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    font-size: 1.2em;
+    transition: all .4s ease;
+    cursor: pointer;
+    &.rotate{
+      transform: rotate(180deg);
+    }
+  }
+
   h6{
     margin-bottom: 1em;
     color: #A6ACCE;
