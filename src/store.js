@@ -12,4 +12,7 @@ export const store = reactive({
   // theme
   darkMode: true,
 
+  // email
+  email: 'amormino.alessandro97@gmail.com',
+
 });
