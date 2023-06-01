@@ -32,10 +32,6 @@ export default{
         <img src="/img/markdown_icon.svg" alt="" class="explorer-img">
         <router-link :to="{name:'github'}">github.md</router-link>
       </div>
-      <div class="contact flex">
-        <img src="/img/json_icon.svg" alt="" class="explorer-img">
-        <router-link :to="{name:'contact'}">contact.json</router-link>
-      </div>
     </div>
   </div>
 </div>

@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage.vue';
 import AppProjects from './pages/AppProjects.vue';
 import AppAbout from './pages/AppAbout.vue';
 import AppGithub from './pages/AppGithub.vue';
-import AppContact from './pages/AppContact.vue';
 import ProjectDetails from './pages/ProjectDetails.vue';
 
 // setto la costante router per definire le rotte
@@ -33,11 +32,6 @@ const router = createRouter({
       path: '/github',
       name: 'github',
       component: AppGithub,
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: AppContact,
     },
     // rotta che gestisce il singolo progetto
     {

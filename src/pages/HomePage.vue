@@ -24,7 +24,7 @@ export default {
       <h3 class="third">Full Stack Web <span>Developer</span></h3>
       <div class="buttons">
         <router-link :to="{name: 'projects'}"><button class="_btn _btn-primary">View works</button></router-link>
-        <router-link :to="{name: 'contact'}"><button class="_btn _btn-secondary">Contact me</button></router-link>
+        <button class="_btn _btn-secondary">Contact me</button>
       </div>
     </div>
     <div class="svg-image">
