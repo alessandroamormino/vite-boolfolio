@@ -117,16 +117,11 @@ export default {
   <h3>Things i use:</h3>
   <hr>
   <div class="technologies">
-    <!-- <div class="titles">
-      <h5>Front-End</h5>
-      <h5>Back-End</h5>
-    </div> -->
     <div class="columns">
       <div class="column">
         <h5>Front-End</h5>
         <div class="column-inner">
           <div v-for="image in this.frontEnd" class="tech front">
-            <!-- <img :src="image.path" alt="{{image.name}}">  -->
             <i :class="image.icon"></i>
             <div class="name">{{image.name}}</div>
           </div>
@@ -136,7 +131,6 @@ export default {
         <h5>Back-End</h5>
         <div class="column-inner">
           <div v-for="image in this.backEnd" class="tech back">
-            <!-- <img :src="image.path" alt="{{image.name}}">  -->
             <i :class="image.icon"></i>
             <div class="name">{{image.name}}</div>
           </div>
@@ -146,16 +140,24 @@ export default {
         <h5>Programs</h5>
         <div class="column-inner">
           <div v-for="image in this.programs" class="tech programs">
-            <!-- <img :src="image.path" alt="{{image.name}}">  -->
             <i :class="image.icon"></i>
             <div class="name">{{image.name}}</div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="titles">
-      <h5>Programs</h5>
-    </div> -->
+  </div>
+  <div class="socials">
+    <h3>Socials</h3>
+    <hr>
+    <div class="box">
+      <div class="box-inner">
+        <a href="https://www.linkedin.com/in/alessandro-amormino-b059ab1b8/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/il.nalo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/alessandroamormino" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/ale_amormino" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -175,32 +177,16 @@ p{
   .columns{
     display: flex;
     gap: 2em;
-    // justify-content: center;
   }
   .column{
     display: flex;
     flex-flow: column nowrap;
-    // flex-flow: row wrap;
-    // justify-content: center;
     align-items: center;
     gap: 1em;
     // flex
-    // width: 50%;
-    // width: 200px;
     padding: 1.5em;
     border-radius: 50px;
     background-color: $explorer-dark;
-    // border: 1px solid $light-blue;
-    // &.big{
-    //   margin: 1em auto;
-    // }
-    // &:first-of-type{
-    //   width: 300px;
-    //   text-align: center;
-    //   .column-inner{
-    //     justify-content: space-between;
-    //   }
-    // }
     .column-inner{
       display: flex;
       flex-flow: row wrap;
@@ -221,6 +207,28 @@ p{
     }
     .name{
       text-align: center;
+    }
+  }
+}
+
+.socials{
+  margin: 2em 0;
+  .box-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 0 1.5em;
+    // flex
+    width: 200px;
+    height: 200px;
+
+    margin: 2em 0;
+    padding: 1.5em;
+    border-radius: 50px;
+    background-color: $explorer-dark;
+    i{
+      font-size: 3em;
     }
   }
 }
@@ -252,6 +260,20 @@ p{
     }
 
 
+  }
+  .socials{
+    .box{
+      display: flex;
+      justify-content: center;
+      .box-inner{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 0;
+        i{
+          font-size: 32px;
+        }
+      }
+    }
   }
 }
 </style>
