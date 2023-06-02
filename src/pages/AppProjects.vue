@@ -45,22 +45,6 @@ export default {
 
       });
     }, 
-    // nextPage(){
-    //   if(this.currentPage == this.lastPage){
-    //     this.currentPage = 1;
-    //   } else {
-    //     this.currentPage++;
-    //   }
-    //   this.getProjects();
-    // }, 
-    // prevPage(){
-    //   if(this.currentPage == 1){
-    //     this.currentPage = this.lastPage;
-    //   } else {
-    //     this.currentPage--;
-    //   }
-    //   this.getProjects();
-    // }, 
     updatePage(index){
       this.currentPage = index + 1;
       this.getProjects();
@@ -156,6 +140,15 @@ export default {
 }
 .alert{
   margin-top: 2em;
+}
+
+#type_id{
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  &:active{
+    transform: scale(.9)
+  }
 }
 
 
