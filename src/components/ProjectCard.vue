@@ -36,7 +36,7 @@ import {store} from '../store.js';
         <span v-for="technology in project.technologies" class="badge rounded-pill mx-1" :style="{border:'1px solid' + technology.color}">{{ technology.name }}</span>
       </div>
       <div class="links">
-        <a href="#link-repo" target="_blank">Source Code</a>
+        <a v-if="project.repo" :href="project?.repo" target="_blank">Source Code</a>
         <a v-if="project.website != null" href="#link-website" target="_blank">Website</a>
         <router-link :to="{name: 'project-detail', params: {slug: project.slug}}">Details</router-link>
       </div>
