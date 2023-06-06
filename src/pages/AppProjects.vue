@@ -151,5 +151,14 @@ export default {
   }
 }
 
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  form{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
 
 </style>

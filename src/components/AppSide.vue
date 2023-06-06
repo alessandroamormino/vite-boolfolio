@@ -58,7 +58,7 @@ nav{
     justify-content: space-between;
     // flex
     width: 60px;
-    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
     background-color: $nav-dark;
     .top, .bottom{
       display: flex;

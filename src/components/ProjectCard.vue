@@ -101,5 +101,13 @@ import {store} from '../store.js';
   }
 }
 
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .card-projects{
+    filter: none;
+  }
+}
 
 </style>
