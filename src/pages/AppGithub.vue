@@ -10,6 +10,7 @@ export default {
 </script>
 <template>
   <h1>My Github</h1>
+  <hr>
   <div class="box">
     <img src="/img/github.jpg" alt="github_photo">
     <div class="separator"></div>
@@ -125,6 +126,30 @@ export default {
     &:hover{
       transform: scale(1.05);
     }
+  }
+}
+
+// *******************************************
+//                  RESPONSIVE
+// *******************************************
+@media only screen and (max-width: 576px){
+  .box{
+    flex-flow: column;
+    text-align: center;
+    .separator::after{
+      width: 60px;
+      height: 2px;
+    }
+    img{
+      border-radius: 10px;
+    }
+    margin: 1em;
+  }
+  .contributions{
+    #contributions{
+      width: 100%;
+    }
+    margin: 2em 0;
   }
 }
 </style>

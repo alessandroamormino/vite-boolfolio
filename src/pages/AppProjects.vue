@@ -59,8 +59,8 @@ export default {
 <template>
     <div v-if="this.store.projects.length > 0">
       <h1>Stuff i've built so far</h1>
+      <hr>
       <!-- creo una select per filtrare la tipologia del progetto -->
-
       <form @submit.prevent="" action="" class="d-flex gap-3">
         <span>Search for Type:</span>
         <select name="type_id" id="type_id" v-model="selectedTypeId" @change="getProjects()">
